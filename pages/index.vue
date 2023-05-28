@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <p v-for="char in pokemon.sort((a, b) => a.num - b.num)" :key="char.num">
-      {{ char.num + ' ' + char.species }}
-    </p>
+  <div class="grid grid-cols-3 md:grid-cols-6 gap-4 p-10">
+    <div 
+      v-for="char in pokemon.sort((a, b) => a.num - b.num)" 
+      :key="char.num"
+      class="shadow p-4 flex flex-col items-center justify-end gap-4"
+    >
+      <img :src="char.sprite" alt="" />
+      <p>
+        {{ char.num + ' ' + char.species }}
+      </p>
+    </div>
   </div>
 </template>
 
