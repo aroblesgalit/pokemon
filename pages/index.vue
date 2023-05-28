@@ -4,6 +4,17 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  head() {
+    return {
+      title: 'Pokemon',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'A collection of Pokemon'
+        }
+      ]
+    }
+  }
 }
 </script>
