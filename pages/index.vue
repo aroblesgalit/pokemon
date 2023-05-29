@@ -1,20 +1,21 @@
 <template>
   <div class="grid grid-cols-3 md:grid-cols-6 gap-4 p-10">
-    <div 
+    <PokemonTile 
       v-for="char in pokemon.sort((a, b) => a.num - b.num)" 
       :key="char.num"
-      class="shadow p-4 flex flex-col items-center justify-end gap-4"
-    >
-      <img :src="char.sprite" alt="" />
-      <p>
-        {{ char.num + ' ' + char.species }}
-      </p>
-    </div>
+      :char="char"
+    />
+    <div class="hidden bg-green-400 bg-red-400 bg-blue-400 bg-stone-300 bg-orange-300 bg-yellow-400 bg-purple-400 bg-pink-400 bg-gray-400 bg-slate-400"></div>
   </div>
 </template>
 
 <script>
+import PokemonTile from '../components/PokemonTile.vue';
+
 export default {
+  components: {
+    PokemonTile
+  },
   data() {
     return {
       pokemon: []
@@ -39,6 +40,7 @@ export default {
                 num
                 species
                 sprite
+                color
               }
             }
           `
