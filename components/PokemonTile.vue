@@ -9,7 +9,7 @@
             <img :src="char.sprite" alt="" class="relative z-10 mx-auto" />
             <div class="absolute bottom-0 left-0 right-0 mx-auto text-center bg-white/50 z-0"></div>
         </div>
-        <p class="capitalize">{{ char.species }}</p>
+        <p class="capitalize">{{ charSpecies }}</p>
     </div>
 </template>
 
@@ -26,6 +26,12 @@ export default {
                 this.char.color == 'Black' ?
                 `bg-slate-400` :
                 `bg-${this.char.color.toLowerCase()}-400`))
+        },
+        charSpecies() {
+            const name = this.char.species;
+            return name.includes('nidoran') ? 
+            ('nidoran' + (name[name.length - 1] == 'f' ? '♀' : '♂')) :
+            name 
         }
     }
 }
