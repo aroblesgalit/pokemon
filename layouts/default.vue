@@ -1,7 +1,9 @@
 <template>
-    <div class="my-8 mx-auto py-4 px-8 overflow-hidden">
+    <div class="mb-8 overflow-hidden">
         <AppHeader />
-        <nuxt />
+        <div class="max-w-5xl mx-auto">
+            <nuxt />
+        </div>
     </div>
 </template>
 
