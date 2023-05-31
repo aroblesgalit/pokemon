@@ -25,7 +25,8 @@ export default {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "ＭＳ Ｐゴシック";
     font-size: 1rem;
     line-height: 1.6;
 }

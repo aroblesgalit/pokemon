@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-3 md:grid-cols-6 gap-4 p-10">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 p-10">
     <PokemonTile 
       v-for="char in pokemon.sort((a, b) => a.num - b.num)" 
       :key="char.num"
