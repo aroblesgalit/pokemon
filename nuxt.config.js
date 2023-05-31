@@ -16,6 +16,12 @@ export default {
     ]
   },
 
+  // GitHub pages deployment
+  mode: 'static',
+  router: {
+    base: '/pokemon/'
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
