@@ -21,14 +21,34 @@ export default {
       pokemon: []
     }
   },
-  async created() {
+  async fetch() {
     // const config = {
     //   headers: {
     //     'Content-Type': 'application/json'
     //   }
     // }
-    for (let i = 1; i <= 150; i++) {
-      fetch('https://graphqlpokemon.favware.tech/v7', {
+    for (let i = 1; i <= 2; i++) {
+      // const char = await this.$axios.$post('https://graphqlpokemon.favware.tech/v7', {
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({
+      //     query: `
+      //       {
+      //         getPokemonByDexNumber(number: ${i}) {
+      //           num
+      //           species
+      //           sprite
+      //           color
+      //         }
+      //       }
+      //     `
+      //   })
+      // }).catch(error => console.error(error))
+      // const res = char.json();
+      // console.log(char)
+      // this.pokemon.push(JSON.parse(JSON.stringify(res.data.getPokemonByDexNumber)))
+      const char = await fetch('https://graphqlpokemon.favware.tech/v7', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -46,7 +66,9 @@ export default {
           `
         })
       }).then(res => res.json())
-        .then(res => this.pokemon.push(JSON.parse(JSON.stringify(res.data.getPokemonByDexNumber))))
+        .then(res => JSON.parse(JSON.stringify(res.data.getPokemonByDexNumber)))
+      
+      this.pokemon.push(char)
     }
     // this.pokemon = this.pokemon[0] + this.pokemon[1]
     console.log(this.pokemon)
