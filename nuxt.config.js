@@ -17,8 +17,8 @@ export default {
   },
 
   // GitHub pages deployment
-  target: 'static',
-  ssr: false,
+  // target: 'static',
+  // ssr: false,
   router: {
     base: '/pokemon/'
   },
