@@ -24,7 +24,44 @@ export default {
                 num
                 species
                 sprite
+                backSprite
                 color
+                height
+                weight
+                baseForme
+                baseSpecies
+                abilities {
+                    first {
+                        name
+                        desc
+                    }
+                    second {
+                        name
+                        desc
+                    }
+                    special {
+                        name
+                        desc
+                    }
+                    hidden {
+                        name
+                        desc
+                    }
+                }
+                baseStats {
+                    attack
+                    defense
+                    hp
+                    specialattack
+                    specialdefense
+                    speed   
+                }
+                evolutions {
+                    species
+                }
+                preevolutions {
+                    species
+                }
               }
             }
           `
