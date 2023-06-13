@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-8 overflow-hidden">
+    <div class="mb-8">
         <AppHeader />
         <div class="max-w-5xl mx-auto">
             <nuxt />

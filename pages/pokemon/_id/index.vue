@@ -1,9 +1,15 @@
 <template>
-    <div class="w-full">
-        <div :class="[bgColor]">
-            <h1>{{ char.species }}</h1>
-            <h3>{{ char.num }}</h3>
-            <img :src="char.sprite" :alt="char.species">
+    <div class="w-full pokemon-detail">
+        <div :class="[bgColor]" class="header">
+            <div class="max-w-3xl mx-auto text-center pt-5 relative">
+                <h1 class="font-bold text-5xl text-white">{{ char.species }}</h1>
+                <h3 class="font-bold text-lg text-white">#{{ char.num }}</h3>
+                <img 
+                    :src="char.sprite" 
+                    :alt="char.species"
+                    class="mx-auto relative left-0 right-0 scale-125"
+                >
+            </div>
         </div>
     </div>
 </template>
@@ -102,5 +108,8 @@ export default {
 </script>
 
 <style scoped>
-
+.pokemon-detail > .header > div > img {
+    bottom: -20px;
+    /* width: 100px; */
+}
 </style>
