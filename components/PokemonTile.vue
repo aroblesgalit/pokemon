@@ -3,14 +3,14 @@
         <div 
             :id="char.num"
             :class="[bgColor]"
-            class="pokemon-tile relative shadow p-4 flex flex-col items-center justify-end gap-4 h-full rounded-2xl"
+            class="pokemon-tile relative shadow p-4 flex flex-col items-center justify-end gap-4 h-40 min-h-full rounded-2xl"
         >
             <span class="absolute text-sm font-bold text-white/75">{{ char.num }}</span>
             <div class="sprite relative w-full">
                 <img :src="char.sprite" alt="" class="relative z-10 mx-auto" />
                 <div class="absolute bottom-0 left-0 right-0 mx-auto text-center bg-white/50 z-0"></div>
             </div>
-            <p class="capitalize">{{ charSpecies }}</p>
+            <p class="capitalize font-bold text-white">{{ charSpecies }}</p>
         </div>
     </nuxt-link>
 </template>

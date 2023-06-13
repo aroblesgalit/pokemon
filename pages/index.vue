@@ -27,7 +27,7 @@ export default {
     //     'Content-Type': 'application/json'
     //   }
     // }
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 18; i++) {
       // const char = await this.$axios.$post('https://graphqlpokemon.favware.tech/v7', {
       //   headers: {
       //     'Content-Type': 'application/json'

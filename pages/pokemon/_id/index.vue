@@ -1,6 +1,10 @@
 <template>
-    <div>
-        Species: {{ char }}
+    <div class="w-full">
+        <div :class="[bgColor]">
+            <h1>{{ char.species }}</h1>
+            <h3>{{ char.num }}</h3>
+            <img :src="char.sprite" :alt="char.species">
+        </div>
     </div>
 </template>
 
@@ -72,7 +76,27 @@ export default {
       }).then(res => res.json())
         .then(res => JSON.parse(JSON.stringify(res.data.getPokemonByDexNumber)))
       
-      this.char = pokemon
+        pokemon.color = pokemon.color.toLowerCase();
+        const name = pokemon.species;
+        if (name.includes('nidoran')) {
+            if (name[name.length - 1] == 'f') {
+                pokemon.species = 'nidoran♀'
+            } else {
+                pokemon.species = 'nidoran♂'
+            }
+        }
+        this.char = pokemon
+    },
+    computed: {
+        bgColor() {
+            return this.char.color == 'White' ?  
+                `bg-stone-300` : (
+                this.char.color == 'Brown' ?
+                `bg-orange-300` : (
+                this.char.color == 'Black' ?
+                `bg-slate-400` :
+                `bg-${this.char.color}-400`))
+        }
     }
 }
 </script>
