@@ -71,7 +71,6 @@ export default {
       this.pokemon.push(char)
     }
     // this.pokemon = this.pokemon[0] + this.pokemon[1]
-    console.log(this.pokemon)
   },
   head() {
     return {

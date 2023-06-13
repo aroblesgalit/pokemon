@@ -3,7 +3,7 @@
         <div 
             :id="char.num"
             :class="[bgColor]"
-            class="pokemon-tile relative shadow p-4 flex flex-col items-center justify-end gap-4"
+            class="pokemon-tile relative shadow p-4 flex flex-col items-center justify-end gap-4 h-full rounded-2xl"
         >
             <span class="absolute text-sm font-bold text-white/75">{{ char.num }}</span>
             <div class="sprite relative w-full">

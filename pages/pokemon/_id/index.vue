@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{ char.species }}
+        Species: {{ char }}
     </div>
 </template>
 
@@ -23,6 +23,9 @@ export default {
               getPokemonByDexNumber(number: ${this.$route.params.id}) {
                 num
                 species
+                types {
+                    name
+                }
                 sprite
                 backSprite
                 color
