@@ -11,6 +11,19 @@
                 >
             </div>
         </div>
+        <div class="max-w-3xl mx-auto pt-5">
+            <ul>
+                <li>
+                    <span>height: </span><span>{{ char.height }}</span>
+                </li>
+                <li>
+                    <span>weight: </span><span>{{ char.weight }}</span>
+                </li>
+                <li>
+                    <span>type: </span><span v-for="el in char.types">{{ el.name}}</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
