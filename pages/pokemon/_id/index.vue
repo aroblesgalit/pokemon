@@ -11,16 +11,38 @@
                 >
             </div>
         </div>
-        <div class="max-w-lg mx-auto pt-5">
+        <div class="max-w-lg mx-auto pt-10">
             <ul>
                 <li>
-                    <span>height: </span><span>{{ char.height }} m</span>
+                    <span>Height: </span><span>{{ char.height }} m</span>
                 </li>
                 <li>
-                    <span>weight: </span><span>{{ char.weight }} kg</span>
+                    <span>Weight: </span><span>{{ char.weight }} kg</span>
                 </li>
                 <li>
-                    <span>type: </span><span v-for="el in char.types">{{ el.name }}, </span>
+                    <span>Type: </span><span v-for="el in char.types">{{ el.name }}, </span>
+                </li>
+            </ul>
+        </div>
+        <div class="max-w-lg mx-auto pt-10">
+            <ul>
+                <li>
+                    <span>Attack: </span><span>{{ char.baseStats && char.baseStats.attack }}</span>
+                </li>
+                <li>
+                    <span>Defense: </span><span>{{ char.baseStats && char.baseStats.defense }} </span>
+                </li>
+                <li>
+                    <span>HP: </span><span>{{ char.baseStats && char.baseStats.hp }}</span>
+                </li>
+                <li>
+                    <span>Special Attack: </span><span>{{ char.baseStats && char.baseStats.specialattack }}</span>
+                </li>
+                <li>
+                    <span>Special Defense: </span><span>{{ char.baseStats && char.baseStats.specialdefense }}</span>
+                </li>
+                <li>
+                    <span>Speed: </span><span>{{ char.baseStats && char.baseStats.speed }}</span>
                 </li>
             </ul>
         </div>
