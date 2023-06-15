@@ -1,7 +1,7 @@
 <template>
     <div class="w-full pokemon-detail">
         <div :class="[bgColor]" class="header">
-            <div class="max-w-3xl mx-auto text-center pt-5 relative">
+            <div class="max-w-lg mx-auto text-center pt-5 relative">
                 <h1 class="font-bold text-5xl text-white">{{ char.species }}</h1>
                 <h3 class="font-bold text-lg text-white">#{{ char.num }}</h3>
                 <img 
@@ -11,16 +11,16 @@
                 >
             </div>
         </div>
-        <div class="max-w-3xl mx-auto pt-5">
+        <div class="max-w-lg mx-auto pt-5">
             <ul>
                 <li>
-                    <span>height: </span><span>{{ char.height }}</span>
+                    <span>height: </span><span>{{ char.height }} m</span>
                 </li>
                 <li>
-                    <span>weight: </span><span>{{ char.weight }}</span>
+                    <span>weight: </span><span>{{ char.weight }} kg</span>
                 </li>
                 <li>
-                    <span>type: </span><span v-for="el in char.types">{{ el.name}}</span>
+                    <span>type: </span><span v-for="el in char.types">{{ el.name }}, </span>
                 </li>
             </ul>
         </div>
@@ -108,11 +108,11 @@ export default {
     },
     computed: {
         bgColor() {
-            return this.char.color == 'White' ?  
+            return this.char.color == 'white' ?  
                 `bg-stone-300` : (
-                this.char.color == 'Brown' ?
+                this.char.color == 'brown' ?
                 `bg-orange-300` : (
-                this.char.color == 'Black' ?
+                this.char.color == 'black' ?
                 `bg-slate-400` :
                 `bg-${this.char.color}-400`))
         }
@@ -124,5 +124,9 @@ export default {
 .pokemon-detail > .header > div > img {
     bottom: -20px;
     /* width: 100px; */
+}
+
+.pokemon-detail h1 {
+    text-transform: capitalize;
 }
 </style>
